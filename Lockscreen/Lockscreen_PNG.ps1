@@ -1,5 +1,5 @@
 ﻿IF(!(Test-Path C:\Windows\Lockscreen_PNG.png)) {
-Copy-Item "\\ad\dep$\Scripts\Lockscreen\Lockscreen_PNG.png" -Destination "C:\Windows\Lockscreen_PNG.png"
+Copy-Item "C:\**\Lockscreen\Lockscreen_PNG.png" -Destination "C:\Windows\Lockscreen_PNG.png"
 }
 
 
