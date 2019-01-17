@@ -4,7 +4,7 @@
 		Get-WmiObject Win32_NetworkAdapterConfiguration -computername $_ -Filter 'IPEnabled=True' |
 		Foreach-Object{
 		If ($_.IpAddresses -contains $ip.AddressToSring) {
-			Write-Host -ForegroundColor Blue "Carte réseau détectée. Changement de la configuration DNS, et ajout au domaine $domaine..."
+			Write-Host -ForegroundColor orange "Carte réseau détectée. Changement de la configuration DNS, et ajout au domaine $domaine..."
 			$_.SetDNSServerSearchOrder(@('IP.IP.IP.IP', 'IP.IP.IP.IP'))
 			$_.SetDynamicDNSRegistration($true)
 		} else {
